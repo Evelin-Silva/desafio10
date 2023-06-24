@@ -29,6 +29,10 @@
     --color06: #063d1e;
 }
 
+::selection{
+    background-color: var(--color05);
+}
+
 body{
     background-color: var(--color01);
 }
@@ -37,6 +41,7 @@ header{
     background-image: linear-gradient(180deg, var(--color05), var(--color06));
     color: white;
     padding: 20px 0 0 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
 }
 
 header > h1{
@@ -59,14 +64,16 @@ nav a{
     display: inline-block;
     height: 20px;
     width: fit-content;
-    padding: 3px;
+    padding: 5px;
     color: white;
     text-decoration: none;
     font-size: 0.6em;
+
 }
 
 nav a:hover{
     background-color: var(--color04);
+    color: var(--color06);
     border-radius: 4px 4px 0 0;
 }
 
@@ -87,7 +94,7 @@ main h1{
 
 main h2{
     font-size: 1em;
-    background-image: linear-gradient(45deg, var(--color02), white);
+    background-image: linear-gradient(45deg, var(--color02), transparent);
 }
 
 main p{
@@ -98,14 +105,23 @@ main a{
     color: var(--color06);
     text-decoration: none;
     font-weight: 600;
+    background-color: var(--color04);
+    padding: 2px 2.5px;
+    border-radius: 2px;
 }
 
 main a::after{
     content: ' ☍';
 }
 
-strong{
+main a:hover{
     color: var(--color05);
+    text-decoration: underline;
+}
+
+strong{
+    color: var(--color06);
+    font-weight: bold;
 }
 
 main h1, main h2{
@@ -114,7 +130,10 @@ main h1, main h2{
 }
 
 main p{
-    margin: 10px 0;
+    margin: 15px 0;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.5em;
 }
 
 img{
@@ -123,21 +142,30 @@ img{
 
 main img#bugdroid{
     display: block;
-    width: 50%;
+    max-width: 250px;
     margin: auto;
 }
 
-#video{
-    background-color: var(--color06);
-    padding: 20px 40px;
+aside{
+    background-color: var(--color03);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.307);
 }
 
-#video iframe{
-    width: 100%;
+aside > h3{
+    background-color: var(--color05);
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+    margin: -20px -20px 0 -20px;
+    border-radius: 10px 10px 0 0;
 }
 
-ul li{
+aside > ul{
+    columns: 2;
     list-style: none;
+    font-size: 0.8em;
 }
 
 li::before{
@@ -161,4 +189,9 @@ footer p{
     margin: auto;
     font-size: 0.8em;
     text-align: center;
+}
+
+footer a:hover{
+    color: var(--color02);
+    text-decoration: underline;
 }
