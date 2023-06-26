@@ -37,6 +37,10 @@ body{
     background-color: var(--color01);
 }
 
+h1, h2{
+    font-weight: normal;
+}
+
 header{
     background-image: linear-gradient(180deg, var(--color05), var(--color06));
     color: white;
@@ -67,7 +71,7 @@ nav a{
     padding: 5px;
     color: white;
     text-decoration: none;
-    font-size: 0.6em;
+    font-size: 0.8em;
 
 }
 
@@ -79,7 +83,7 @@ nav a:hover{
 
 main{
     background-color: white;
-    max-width: 550px;
+    max-width: 750px;
     min-width: 320px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -144,6 +148,22 @@ main img#bugdroid{
     display: block;
     max-width: 250px;
     margin: auto;
+}
+
+div.video{
+    background-color: var(--color05);
+    margin: 0 -20px 30px -20px;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 50%;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 aside{
